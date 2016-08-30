@@ -152,6 +152,16 @@ var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 		});
     
 L.control.scale().addTo(map);
+//Poniższe funkcje zastępują standardowe przyciski z toolbara Leaflet.draw - możd do niech dodać też standardowe opcje - póki co puste
+        function drawPoint(){
+            var pointDrawer = new L.Draw.Marker(map);     
+            pointDrawer.enable();
+        }
+        function drawPolygon(){
+            var polygonDrawer = new L.Draw.Polygon(map);     
+            polygonDrawer.enable();
+        }
+        
     
 </script>
 
