@@ -166,11 +166,18 @@ var popup = L.popup();
       .setContent('Pole nazwa: ' + event.layer.feature.properties.nazwa)
       .openOn(map);
   });
-		map.on('draw:created', function(event) {
-			var layer = event.layer;
-
-			drawnItems.addLayer(layer);
-		});
+        map.on('draw:created', function(event) {
+            var layer = event.layer;
+            var formularz = L.popup();//nowy popup jest tworzony niezależnie do obiektu na jego współrzędnych
+            var content = '<span><b>Wpisz dowolny tekst</b></span><br/><input id="nowyTekst" type="text"/><br/><br/><span><b>A tu cokolwiek bo nie jest podpięte<b/></span><br/><textarea id="innyTekst" cols="25" rows="5"></textarea><br/><br/><input type="button" id="okBtn" value="Zapisz obiekt" onclick="saveData()"/>';
+            formularz.setContent(content);
+            formularz.setLatLng(layer.getLatLng()); //lokalizacja popupa jest brana z utworzonego punktu - inaczej przy poligonach to trzeba będzie rozwiązać
+            formularz.openOn(map);
+            layer.feature = {properties: {}};//inicjacja  miejsca na wpisanie atrybutów
+            layer.feature.properties.nazwa="brak tekstu" //domyślny tekst dopisywany do kolumny nazwa (nazwa jest w tabeli na PostGIS)
+            wfst.addLayer(layer);
+            //wfst.save();//zapis jest poźniej. żeby to działało nie może być ograniczeń do zapisu dla danego workspace
+        });
     
 L.control.scale().addTo(map);
 //Poniższe funkcje zastępują standardowe przyciski z toolbara Leaflet.draw - możd do niech dodać też standardowe opcje - póki co puste
@@ -182,7 +189,16 @@ L.control.scale().addTo(map);
             var polygonDrawer = new L.Draw.Polygon(map);     
             polygonDrawer.enable();
         }
-        
+//funkcja zapisu danych - pobiera dane z formularza, dokleja do ostatnio dodanego obiektu (najwyższe id) i zapisuje
+        function saveData(){
+            var sName = $('#nowyTekst').val(); //jquery bierze wartość z formularza
+            var drawings = wfst.getLayers();  //wfst to warstwa z obiektami
+            drawings[drawings.length - 1].feature.properties.nazwa = sName; //dopisuje wartość do ostatniego dodanego obiektu
+            //tutaj jest miejsce by w identyczny sposób dopisać np. datę i czas lub ID użytkownika
+            wfst.save();//zapis dopiero tutaj po wypełnieniu formularza
+            map.closePopup();
+           
+        }
     
 </script>
 
