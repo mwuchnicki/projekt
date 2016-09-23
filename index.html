@@ -1,3 +1,15 @@
+<?php
+
+    session_start();
+    
+    if (!isset($_SESSION['zalogowany']))
+    {
+        header('Location: index.php');
+        exit();
+    }
+    
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,16 +29,21 @@
   naglowek.innerHTML=powitanie;  
 </script>-->
     <body>
+
+<?php
+        echo "<p>Witaj ".$_SESSION['user'].'! [ <a href="logout.php">Wyloguj się!</a> ]</p>';   
+?>
+
     	<div class="header">
 	    	<h1>LISTA ZADAŃ:</h1>
     	</div>
     	<div class="container">
             <p class="info">Kliknij na treść zadania aby do niego przejść.</p>
 	    	<div class="list">
-                <p class="margines"><a href="zadanie1.html">1. Wskaż miejsce Twojego zamieszkania.</a></p>
-                <p><a href="zadanie2.html">2. Wkaż OBIEKT na mapie.</a></p>
-                <p><a href="zadanie3.html">3. Wskaż miejsca Twoim zdaniem najatrakcyjniejsze dla turystów.</a></p>
-                <p><a href="zadanie4.html">4. Wskaż Twoje ulubione miejsca w mieście.</a></p>
+                <p class="margines"><a href="sandbox.html">1. Wskaż miejsce Twojego zamieszkania.</a></p>
+                <p><a href="sandbox.html">2. Wkaż OBIEKT na mapie.</a></p>
+                <p><a href="sandbox.html">3. Wskaż miejsca Twoim zdaniem najatrakcyjniejsze dla turystów.</a></p>
+                <p><a href="sandbox.html">4. Wskaż Twoje ulubione miejsca w mieście.</a></p>
             </div>        
 		</div>
 		<div class="footer">
