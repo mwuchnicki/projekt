@@ -1,0 +1,77 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Century Gothic';
+	background-color: #fcfcfc;	
+}
+.header {
+	height: 86px;
+	width: 100%;
+
+	border-bottom: 7px solid #febd01;
+
+}
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    z-index: 1;
+}
+.nag {
+	padding-top: 15px;
+	padding-left: 250px;
+	font-size: 25px;
+	font-weight: bold;
+	color: #4a4a4a; 
+}
+.container {
+    height: calc(560px - 117px);
+	padding: 20px 100px 0 100px;
+    background-color: #fff;
+    border-bottom: 7px solid #febd01;
+    border-top: 7px solid #bde247;
+    color: #4a4a4a;
+    overflow: auto; 
+    background-color: #fcfcfc;
+    text-align: center;
+}
+.logowanie {
+	text-align: center;
+	font-weight: bold;
+}
+p {
+	font-size: 18px;
+	text-align: justify;
+}
+.bold {
+	font-weight: bold;
+	font-size: 15px;
+	margin: 0;
+	padding: 0;
+}
+.form {
+	margin: 0;
+	padding: 0;
+}
+input {
+ 	display: inline-block;
+ 	width: 140px;
+ 	padding: 5px 10px;
+ 	font-size: 15px;
+ 	font-weight: bold;
+ 	cursor: pointer;
+ 	text-align: center;
+ 	outline: none;
+ 	color: #fff;
+ 	background-color: #bde247;
+	border: none;
+  	border-radius: 15px;
+}
+.footer {
+	padding-top: 5px;
+	height: 20px;
+	text-align: center;
+	font-size: 15px;
+    color: #4a4a4a;
+    border-top: 7px solid #bde247;
+}
