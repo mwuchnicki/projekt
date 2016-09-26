@@ -1,14 +1,16 @@
 <?php
-    $dir = 'sqlite:G:/wwwroot/SQLite/user_information.db';
+    $dir = 'sqlite:C:/sqlite/users.db';
     $dbh = new PDO($dir) or die ("cannot open");
-
-    $myusername = $_POST['user'];
+    
+    $myid = $_POST['id'];
+    $mylogin = $_POST['user'];
     $mypassword = $_POST['pass'];
 
-    $myusername = stripslashes($myusername);
+    $myid = stripslashes($myid);
+    $mylogin = stripslashes($mylogin);
     $mypassword = stripslashes ($mypassword);
 
-    $query = "SELECT * FROM user_information WHERE username='$myusername' AND password='$mypassword'";
+    $query = "SELECT * FROM users WHERE empid='$myid' AND login='$mylogin' AND password='$mypassword'";
     $result = mysql_query($query);
     $count = mysql_num_rows($result);
 
