@@ -3,7 +3,7 @@
     //jeżeli nie jest zalogowany to wróc do strony logowania
     if (!isset($_SESSION['zalogowany'])) 
     {
-        header('Location: index.php');
+        header('Location: logowanie.php');
         exit();//przekierowuje i wstrzymuje reszte kodu
     }
 ?>
@@ -119,8 +119,8 @@ echo "<p>Witaj ".$_SESSION['login'].'! [ <a href="logout.php">Wyloguj się!</a> 
             --> 
         <br>
 
-        <button class="button" onclick="window.location.href='start.html' ">Powrót</button>     
-        <button class="button" onclick="window.location.href='etap1.html' ">Przejdź do mapy</button>
+        <button class="button" onclick="window.location.href='start.php' ">Powrót</button>     
+        <button class="button" onclick="window.location.href='etap1.php' ">Przejdź do mapy</button>
 
         <br><br>
         </div>  
