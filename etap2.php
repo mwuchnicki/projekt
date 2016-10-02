@@ -3,7 +3,7 @@
     //jeżeli nie jest zalogowany to wróc do strony logowania
     if (!isset($_SESSION['zalogowany'])) 
     {
-        header('Location: index.php');
+        header('Location: logowanie.php');
         exit();//przekierowuje i wstrzymuje reszte kodu
     }
 ?>
@@ -96,8 +96,8 @@
 
             <br><br><br><br>
 
-            <button class="button" onclick="window.location.href='etap1.html' ">Powrót</button>     
-            <button class="button" onclick="window.location.href='koniec.html' ">Zakończ</button>
+            <button class="button" onclick="window.location.href='etap1.php' ">Powrót</button>     
+            <button class="button" onclick="window.location.href='koniec.php' ">Zakończ</button>
             <!--<div class="nav">
                 <div id="layertree">
                 <ul>
