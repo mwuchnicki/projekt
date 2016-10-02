@@ -3,7 +3,7 @@
     //jeżeli nie jest zalogowany to wróc do strony logowania
     if (!isset($_SESSION['zalogowany'])) 
     {
-        header('Location: index.php');
+        header('Location: logowanie.php');
         exit();//przekierowuje i wstrzymuje reszte kodu
     }
 ?>
