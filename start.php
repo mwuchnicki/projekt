@@ -1,15 +1,13 @@
-<!--<?php
-
-    session_start();
-    
-    if (!isset($_SESSION['zalogowany']))
+<?php
+    session_start();  
+    //jeżeli nie jest zalogowany to wróc do strony logowania
+    if (!isset($_SESSION['zalogowany'])) 
     {
         header('Location: index.php');
-        exit();
+        exit();//przekierowuje i wstrzymuje reszte kodu
     }
-    
 ?>
--->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +27,11 @@
   naglowek.innerHTML=powitanie;  
 </script>-->
     <body>
-
+	    
+<?php
+	echo "<p>Witaj ".$_SESSION['login'].'! [ <a href="logout.php">Wyloguj się!</a> ]</p>';
+    
+?>
 
     	<div class="header">
             <p class="nag">Nazwa Aplikacji</p>
