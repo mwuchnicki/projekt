@@ -1,11 +1,11 @@
 <?php
 
 	session_start();
-	
+	//jeśli ktoś jest zalogowany
 	if ((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true))
 	{
-		header('Location: start.html');
-		exit();
+		header('Location: start.php');
+		exit();//naychmiastowe dzialanie kody wyzej
 	}
 
 ?>
@@ -31,7 +31,7 @@
 
     	<div class="container">
             <h2>PANEL LOGOWANIA</h2>
-            <form action="php/zaloguj.php" method="post">
+            <form action="zaloguj.php" method="post">
 	
 				<p class="logowanie">Login:<br><input type="text" name="login" /> <br><br>
 				Hasło:<br><input type="password" name="haslo" /></p>
@@ -45,7 +45,10 @@
 			Prawa autorskie | &copy; 2016
 		</div>	
 	
-<?php
+<?php 
+//pokazuje błąd logowania tylko jeśli istnieje w sesji 
+//(isset - czy jest ustawiona w sesji)
+
 	if(isset($_SESSION['blad']))	echo $_SESSION['blad'];
 ?>
 
