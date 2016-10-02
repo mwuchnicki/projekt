@@ -45,7 +45,7 @@
             <br><br>
             Fusce scelerisque ac tortor vitae mattis. Integer vitae ultrices neque. Mauris vel malesuada metus. Sed id suscipit metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ornare, ipsum eget vestibulum vulputate, sapien nisi tristique magna, sit amet viverra orci libero vitae nisl. Praesent dictum erat ultrices augue lobortis venenatis. Fusce sed magna in mi consequat euismod non et libero. Mauris a mauris ante. Cras tempus purus ac massa dapibus, quis pulvinar sapien volutpat. Etiam leo nisi, aliquam nec massa id, fringilla porta tellus. Phasellus a dui nulla. Suspendisse rutrum consectetur venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
             <br>  
-        <button class="button" onclick="window.location.href='dane.html' ">Rozpocznij</button>
+        <button class="button" onclick="window.location.href='dane.php' ">Rozpocznij</button>
 
         </div>  
         
