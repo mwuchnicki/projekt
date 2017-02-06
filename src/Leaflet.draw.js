@@ -10,60 +10,60 @@ L.drawLocal = {
 			// #TODO: this should be reorganized where actions are nested in actions
 			// ex: actions.undo  or actions.cancel
 			actions: {
-				title: 'Cancel drawing',
-				text: 'Cancel'
+				title: 'Zamknij rysowanie',
+				text: 'Zamknij'
 			},
 			finish: {
-				title: 'Finish drawing',
-				text: 'Finish'
+				title: 'Zakończ rysowanie',
+				text: 'Zakończ'
 			},
 			undo: {
-				title: 'Delete last point drawn',
-				text: 'Delete last point'
+				title: 'Usuń ostatni narysowany punkt',
+				text: 'Usuń ostatni punkt'
 			},
 			buttons: {
-				polyline: 'Draw a polyline',
-				polygon: 'Draw a polygon',
-				rectangle: 'Draw a rectangle',
-				circle: 'Draw a circle',
-				marker: 'Draw a marker'
+				polyline: 'Narysuj łamaną',
+				polygon: 'Narysuj wielokąt',
+				rectangle: 'Narysuj prostokąt',
+				circle: 'Narysuj okrąg',
+				marker: 'Narysuj znacznik'
 			}
 		},
 		handlers: {
 			circle: {
 				tooltip: {
-					start: 'Click and drag to draw circle.'
+					start: 'Kliknij i przeciągnij, aby narysować okrąg.'
 				},
-				radius: 'Radius'
+				radius: 'Promień'
 			},
 			marker: {
 				tooltip: {
-					start: 'Click map to place marker.'
+					start: 'Kliknij na mapie, aby umieścić znacznik.'
 				}
 			},
 			polygon: {
 				tooltip: {
-					start: 'Click to start drawing shape.',
-					cont: 'Click to continue drawing shape.',
-					end: 'Click first point to close this shape.'
+					start: 'Kliknij, aby rozpocząć rysowanie kształtu.',
+					cont: 'Kliknij, aby kontynuować rysowanie kształtu.',
+					end: 'Kliknij pierwszy punkt, aby zamknąć ten kształt.'
 				}
 			},
 			polyline: {
-				error: '<strong>Error:</strong> shape edges cannot cross!',
+				error: '<strong>Błąd:</strong> krawędzie nie moga się przecinać!',
 				tooltip: {
-					start: 'Click to start drawing line.',
-					cont: 'Click to continue drawing line.',
-					end: 'Click last point to finish line.'
+					start: 'Kliknij, aby rozpocząć rysowanie linii.',
+					cont: 'Kliknij, aby kontynuować rysowanie linii.',
+					end: 'Kliknij ostatni punkt, aby zakończyć linię.'
 				}
 			},
 			rectangle: {
 				tooltip: {
-					start: 'Click and drag to draw rectangle.'
+					start: 'Kliknij i przeciągnij, aby narysować prostokąt.'
 				}
 			},
 			simpleshape: {
 				tooltip: {
-					end: 'Release mouse to finish drawing.'
+					end: 'Zwolnij przycisk myszy, aby zakończyć rysowanie.'
 				}
 			}
 		}
@@ -72,31 +72,31 @@ L.drawLocal = {
 		toolbar: {
 			actions: {
 				save: {
-					title: 'Save changes.',
-					text: 'Save'
+					title: 'Zapisz zmiany.',
+					text: 'Zapisz'
 				},
 				cancel: {
-					title: 'Cancel editing, discards all changes.',
-					text: 'Cancel'
+					title: 'Anuluj edycję, odrzucić wszystkie zmiany.',
+					text: 'Anuluj'
 				}
 			},
 			buttons: {
-				edit: 'Edit layers.',
-				editDisabled: 'No layers to edit.',
-				remove: 'Delete layers.',
-				removeDisabled: 'No layers to delete.'
+				edit: 'Edytuj warstwę.',
+				editDisabled: 'Brak warstw do edycji.',
+				remove: 'Usuń warstwę.',
+				removeDisabled: 'Brak warstw do usunięcia.'
 			}
 		},
 		handlers: {
 			edit: {
 				tooltip: {
-					text: 'Drag handles, or marker to edit feature.',
-					subtext: 'Click cancel to undo changes.'
+					text: 'Chwyć wierzchołek lub znacznik aby edywować warstwę.',
+					subtext: 'Kliknij Anuluj, aby cofnąć zmiany.'
 				}
 			},
 			remove: {
 				tooltip: {
-					text: 'Click on a feature to remove'
+					text: 'Kliknij na warstwę aby usunąć'
 				}
 			}
 		}
